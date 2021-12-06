@@ -1,8 +1,8 @@
 # 🎅🏼 Les fêtes approchent 🎄
 
 Et qui dit fêtes de fin d'année, dit repas 🥩 😃.  
-Vous me connaissez, je suis bon mangeur (_et vous ?_) mais l'estomac et mon corps d'athlète ne vont pas aimer 😅.
-![](https://media2.giphy.com/media/xUOxf4Sf4iUHIWvgR2/giphy.gif)
+Vous me connaissez, je suis bon mangeur (_et vous ?_) mais l'estomac et mon corps d'athlète ne vont pas aimer 😅.  
+![](https://media2.giphy.com/media/xUOxf4Sf4iUHIWvgR2/giphy.gif)  
 Je me suis dit, ce serait cool d'avoir une petite application pour suivre mon alimentation pendant cette période.  
  Et ça tombe bien je connais une équipe de **Développeur.se.s** pour me concocter quelque chose aux petits oignons 🧅 (sans faire de jeux de mots).
 
