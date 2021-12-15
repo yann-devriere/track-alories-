@@ -1,6 +1,6 @@
 <?php
 
-include('./submitUser.php');
+include('class/crudUser.php');
 
 if(isset($_POST['submit'])) {
     $email = $_POST["email"];
@@ -12,5 +12,5 @@ if(isset($_POST['submit'])) {
     $poids = $_POST["poids"];
 
         $user = new Users;
-        $user->addUser($email, $prenom, $password, $age, $sexe, $taille, $poids);
+        $user->createUser($email, $prenom, $password, $age, $sexe, $taille, $poids);
 }
