@@ -8,7 +8,7 @@ class Users extends Bdd {
         $sql = "INSERT INTO `users`(`email`, `password`, `prenom`, `age`, `sexe`, `taille`, `poids`) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $req = $this->connect()->prepare($sql);
         $req->execute([$email, $prenom, $password, $age, $sexe, $taille, $poids]);
-        echo "sucess";
+        echo "success";
     }
 
 
