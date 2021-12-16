@@ -16,13 +16,10 @@ require "class/crudUser.php";
 </head>
 <body>
 
-<?php $test= new Users();
-echo $test->delete(2); ?> 
-
 <form action="./class/addUser.php" method="POST">
 <label for="prenom">Email</label> <input type="text" name="email" placeholder ="jean@gmail.com"> <br>
 <label for="prenom">Mot de passe</label> <input type="password" name="password" placeholder ="Définir un mot de passe" > <br>
-<label for="prenom">Confirmer le mot de passe</label> <input type="pasword" name="password2" placeholder ="Confirmer le mot de passe"> <br>
+<label for="prenom">Confirmer le mot de passe</label> <input type="password" name="password2" placeholder ="Confirmer le mot de passe"> <br>
 <label for="prenom">Prénom</label> <input type="text" name="prenom" placeholder ="Jean"> <br>
 <label for="prenom">Age</label><input type="number" name="age" placeholder ="32"><br>
 <label for="prenom">Sexe</label><select type="select" name="sexe"><br>

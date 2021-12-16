@@ -1,9 +1,9 @@
 <?php 
 class Bdd {
-  private $servername = 'localhost';
-  private $username = 'chant';
-  private $password = '01021991';
-  private $dbname= 'trackalories';
+  private $servername = 'localhost:3307';
+  private $username = 'calories';
+  private $password = '10082001';
+  private $dbname= 'calories';
 
 
   public function connect () {
