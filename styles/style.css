@@ -1,0 +1,80 @@
+header {
+  background-image: url("../fruits.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 200px;
+  margin: -10px -10px 0 -10px;
+}
+
+body {
+  background-color: #fbc782;
+}
+
+.formUpdate {
+  float: right;
+  display: block;
+  background-color: #b89262;
+  border-radius: 10%;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.formRepas {
+  float: left;
+  display: block;
+  background-color: #b89262;
+  border-radius: 10%;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.today {
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.message {
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.prenom {
+  font-weight: bold;
+  color: mediumslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+}
+
+.button {
+  background-color: lightblue;
+  color: lightcoral;
+}
+/*# sourceMappingURL=style.css.map */

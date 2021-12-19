@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 $poids=$_SESSION['poids'];
 $taille=$_SESSION['taille'];

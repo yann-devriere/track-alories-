@@ -1,27 +1,30 @@
 <?php
 session_start();
- error_reporting(E_ALL);
- ini_set("display_errors", 1);
+//  error_reporting(E_ALL);
+//  ini_set("display_errors", 1);
 ?>
 
 
 <!DOCTYPE html>
-<html lang="us">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tools/style.css">
     <title>Profil de <?php echo$_SESSION['prenom']?> </title>
 
 </head>
 <body>
-Salut   
+    <header></header>
+ <span class= prenom>Salut   
 <?php 
-echo $_SESSION['prenom'];?>,
+echo  $_SESSION['prenom'];?>,</span>
 <br>
-Ton IMC est de <?php include ('tools/calculator.php');
-?>
+<div class= "message">
+Ton IMC est de <?php include ('tools/calculator.php');?>
 
+</div> 
 <form class="formUpdate" method="POST" action="./class/updateUser.php"> <h3>Un changement physique ?</h3>
             <div class="innerMenu">
              <p>Nouveau poids</p>
@@ -33,7 +36,8 @@ Ton IMC est de <?php include ('tools/calculator.php');
                 </div>
             </div>
         </form> 
-        <br><br><br><br>
+        <br>
+       
         <form class="formRepas" method="POST" action="class/updateRepas.php"> <h3>Tu as mangé quelque chose?</h3>
             <div class="innerMenu">
              <p>Quand ?</p>
@@ -47,33 +51,24 @@ Ton IMC est de <?php include ('tools/calculator.php');
                 </div>
             </div>
         </form> 
-
-<br><br><br>
-<?php // include ("../class/showTodayscalories.php") ?>
-Ajourd'hui, tu as mangé l'équivalent de 
-<?php //showTodaysCalories() 
-include('class/crudRepas.php');
-
-// if($_SESSION['id'] != null){
-
- $email = $_SESSION['email'];
- $date = date('Y-m-d');
- $repas = new Repas;
-
- $repas->showTodaysCalories($email, $date);
-// header("Location: ./profil.php"); 
-// }
-// else{ echo "bug"};
-
-
-?>
+        <br>
 
 
 
-<br><br><br><br>
+        <div class= "today">
+<?php include('class/showTodaysCalories.php');?>
+</div>
+<br>
 
-<footer>
+<div class= "graph">
+<?php  include('tools/graph.php');?>
+</div>
+
+
+<br>
+
+<div>
     <a href="verifications/deconnexion.php"><input type="button" name="deco" class="deco" value="Se deconnecter"></a>
-</footer>
+</div>
 </body>
 </html>
