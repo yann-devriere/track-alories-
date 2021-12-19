@@ -4,13 +4,12 @@ include('DbConnect.php');
 
 class Users extends Bdd {
 
-    public function createUser($email, $password, $prenom, $age, $sexe, $taille, $poids) {
+    public function createUser($email, $password, $prenom,  $age, $sexe, $taille, $poids) {
         $sql = "INSERT INTO `users`(`email`, `password`, `prenom`, `age`, `sexe`, `taille`, `poids`) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $req = $this->connect()->prepare($sql);
         $req->execute([$email, $password, $prenom, $age, $sexe, $taille, $poids]);
         echo "success";
     }
-
 
     public function read($id) {
         $sql = "SELECT * FROM users WHERE id='$id'";

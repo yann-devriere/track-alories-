@@ -9,14 +9,10 @@ if(isset($_POST['btnUpdate'])) {
     $taille = $_POST["newTaille"];
     $poids = $_POST["newPoids"];
     $id = $_SESSION['id'];
-
     $_SESSION['taille'] = $_POST["newTaille"];
     $_SESSION['poids'] = $_POST["newPoids"];
-
     $user = new Users;
     $user->update($taille, $poids, $id);
-
-
 
     header("Location: ../profil.php");
 }

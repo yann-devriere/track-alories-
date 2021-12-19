@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 include('../class/DbConnect.php');
 $db = new bdd;
 
@@ -31,7 +30,7 @@ if(isset($_POST['formconnexion'])) {
           $_SESSION['age'] = $userinfo['age'];
           $_SESSION['sexe'] = $userinfo['sexe'];
           $_SESSION['taille'] = $userinfo['taille'];
-          $_SESSION['poids'] = $userinfo['poids'];
+          $_SESSION['poids'] = $userinfo['poids'];       
           header("Location: ../profil.php");
          } else {
             $erreur = "Tous les champs doivent être complétés !";
@@ -43,6 +42,3 @@ if(isset($_POST['formconnexion'])) {
       }
    }
          ?>
-
-      
-         

@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-
 include('./crudUser.php');
 
 if(isset($_POST['submit'])) {
@@ -15,7 +14,5 @@ if(isset($_POST['submit'])) {
 
         $user = new Users;
         $user->createUser($email, $password, $prenom, $age, $sexe, $taille, $poids);
-
         header("Location: ../index.php");
-      
 }

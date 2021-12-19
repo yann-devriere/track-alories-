@@ -16,6 +16,12 @@ require "class/crudUser.php";
 </head>
 <body>
 
+<<<<<<< HEAD
+=======
+<?php 
+ ?> 
+
+>>>>>>> b49e9ed1f44229416c9b487443a8b85266f9edce
 <form action="./class/addUser.php" method="POST">
 <label for="prenom">Email</label> <input type="text" name="email" placeholder ="jean@gmail.com"> <br>
 <label for="prenom">Mot de passe</label> <input type="password" name="password" placeholder ="Définir un mot de passe" > <br>
