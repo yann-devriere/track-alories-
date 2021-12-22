@@ -37,8 +37,9 @@ if(isset($_POST['formconnexion'])) {
             echo"$erreur";
          }
       } else {
-         $erreur = '<script>alert("Adresse ou mot de passe érroné");</script>';
+         $erreur = '<script>alert("Adresse ou mot de passe érroné");window.location.href = "../index.php";</script>';
          echo"$erreur";
+       
       }
    }
          ?>
