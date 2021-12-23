@@ -2,12 +2,12 @@
 session_start();
 
 include('../class/DbConnect.php');
-$db = new bdd;
+$db = new Bdd;
 
 
 if(isset($_POST['formconnexion'])) {
-    $emailconnect = ($_POST['emailconnect']);
-    $mdpconnect = ($_POST['mdpconnect']);
+    $emailconnect = $db->valid_donnees($_POST['emailconnect']);
+    $mdpconnect = $db->valid_donnees($_POST['mdpconnect']);
       $requser = $db->connect()->prepare("SELECT password FROM users WHERE email = ?");
       $requser->execute(array($emailconnect));
       $userexist = $requser->rowCount();

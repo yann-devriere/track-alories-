@@ -23,21 +23,24 @@ class Repas extends Bdd {
         $req = $this->connect()->prepare($sql);
         $req->execute();
         $res = $req->fetch();
+        if($res == 0){
+             echo "Vous n'avez encore rien mangé aujourd'hui.";
+        }else{
+
         $sexe = $_SESSION['sexe'];
 // Verification nombre de calories journalières pour un homme
         if($sexe=='homme'){
         if($res['calories'] >= 2700 ){
-            echo "Ajourd'hui, tu as mangé l'équivalent de "  . $res['calories'] .  " calories. Attention, tu as dépassé la limite journalière conseillée, (mais t'inquiètes c'est les fêtes, on peut)";
+            echo "Ajourd'hui, tu as mangé l'équivalent de <span class='text-danger'>"  . $res['calories'] . "</span> calories. <span class='text-danger'> Attention </span>, tu as dépassé la limite journalière conseillée, (mais t'inquiètes c'est les fêtes, on peut)";
         }else{
-        echo "Ajourd'hui, tu as mangé l'équivalent de "  . $res['calories'] . ' calories';
-    }
+            echo "Ajourd'hui, tu as mangé l'équivalent de <span class='text-success'>"  . $res['calories'] . '</span> calories';    }
 }else{
     // Verification nombre de calories journalières pour une femme
     if($res['calories'] >= 2200 ){
-            echo "Ajourd'hui, tu as mangé l'équivalent de "  . $res['calories'] .  " calories. Attention, tu as dépassé la limite journalière conseillée, (mais t'inquiètes c'est les fêtes, on peut)";
+        echo "Ajourd'hui, tu as mangé l'équivalent de <span class='text-danger'>"  . $res['calories'] . "</span> calories. <span class='text-danger'> Attention </span>, tu as dépassé la limite journalière conseillée, (mais t'inquiètes c'est les fêtes, on peut)";
         }else{
-        echo "Ajourd'hui, tu as mangé l'équivalent de "  . $res['calories'] . ' calories';
-    }
+            echo "Ajourd'hui, tu as mangé l'équivalent de <span class='text-success'>"  . $res['calories'] . '</span> calories';    }
+}
 }
 }
   //-------------UPDATE--------------   

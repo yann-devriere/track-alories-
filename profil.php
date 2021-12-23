@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['email'] == null){
+    header("Location: index.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +72,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
             <div class="innerMenu">
              <p>Quand ?</p>
              <input type="date" name="date" required placeholder="" max="<?= date('Y-m-d'); ?>"></input>
-             <p>Combien de calories ?</p>
+             <p class="mt-3">Combien de calories ?</p>
                 <input type="number" name="calories" class="mt-1 " required placeholder="290"></input>
                 <div class="btnSpot">
                 <button type="submit" name="btnRepas" class="btnRepas btn btn-success mt-3">Ajouter</button>
@@ -84,7 +87,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
 
 <!-- affichage du nombre de calories consommées aujourd'hui -->
 
-        <div class= "today mb-5 h5 text-success">
+        <div class= "today mb-5 h5 ">
 <?php include('class/showTodaysCalories.php');?>
 </div>
 <br>
@@ -119,7 +122,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
             <div class="innerMenu">
              <p>Nouveau poids</p>
                 <input type="number" name="newPoids" required placeholder="Nouveau poids en kg"></input>
-             <p>Nouvelle taille</p>
+             <p class="mt-5">Nouvelle taille</p>
                 <input type="decimal" name="newTaille"  required placeholder="Nouvelle taille en m"></input>
                 <div class="btnSpot">
                 <button type="submit" name="btnUpdate" class=" btn btn-success mt-1 btnUpdate">Modifier</button>
@@ -156,7 +159,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
       <div class="ms-2 me-2">
         <p style="font-size:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-</svg> tél : 0689657954</p>
+</svg> tél : xxxxxxxxxx</p>
       </div>
       <div class="ms-2">
       <p class="" style="font-size:10px;"> <a href="https://www.linkedin.com/in/yann-devriere-a3327b222?originalSubdomain=fr"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">

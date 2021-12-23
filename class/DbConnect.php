@@ -12,4 +12,11 @@ class Bdd {
     $connexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $connexion;
   }
+
+  public function valid_donnees($donnees){
+    $donnees = trim($donnees);
+    $donnees = stripslashes($donnees);
+    $donnees = htmlspecialchars($donnees);
+    return $donnees;
+}
 }

@@ -67,7 +67,7 @@ session_start();
 
 
 
-<div class="container-fluid bg-success bg-gradient p-3 mt-5 mt-md-0 " >
+<div class="container-fluid bg-success bg-gradient p-3 mt-5 mt-md-0 mb-5 mb-md-0 " >
 <div class="lead">
   <div class="h4 text-dark" id="presentation">Track'alories </div> <p class="h6">est l'application permettant de suivre votre apport journalier en calories.</p>
  </div>
@@ -75,7 +75,7 @@ session_start();
  
 </div>
 
-
+<!-- Modal connexion -->
 <div class="modal fade" id="btnConnexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -87,11 +87,11 @@ session_start();
       <form class="connexion" method="POST" action="verifications/session.php"> <h3>Connexion</h3>
             <div class="innerMenu">
              <p>Adresse email*</p>
-                <input type="email" name="emailconnect" required placeholder="Email"></input>
-             <p>Mot de passe*</p>
-                <input type="password" name="mdpconnect"  required placeholder="Mot de passe"></input>
+                <input type="email" name="emailconnect" maxlength="254" required placeholder="Email"></input>
+             <p class="mt-3">Mot de passe*</p>
+                <input type="password" name="mdpconnect"  maxlength="25" required placeholder="Mot de passe"></input>
                 <div class="btnSpot">
-                <button type="submit" name="formconnexion" class="btnConnexion">Connexion</button>
+                <button type="submit" name="formconnexion" class="btnConnexion btn-success rounded mt-2">Connexion</button>
                 </div>
             </div>
         </form> 
@@ -114,26 +114,28 @@ session_start();
       <div class="modal-body">
 
  <form action="./class/addUser.php" method="POST">
-    <label for="prenom">Email</label> 
-        <input type="text" name="email" placeholder="jean@gmail.com"> <br>
-    <label for="prenom">Mot de passe</label> 
-        <input type="password" name="password" placeholder ="Définir un mot de passe" > <br>
-    <label for="prenom">Confirmer le mot de passe</label> 
-        <input type="password" name="password2" placeholder ="Confirmer le mot de passe"> <br>
-    <label for="prenom">Prénom</label> 
-        <input type="text" name="prenom" placeholder ="Jean"> <br>
-    <label for="prenom">Age</label>
-        <input type="number" name="age" placeholder ="32"><br>
-    <label for="prenom">Sexe</label>
-        <select type="select" name="sexe"><br>
+      <p>Email</p> 
+        <input type="text" name="email" maxlength="254" required placeholder="jean@gmail.com"
+       > <br>
+      <p class="mt-3">Mot de passe</p>
+        <input type="password" name="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
+      <p class="mt-3">Confirmer le mot de passe</p>
+        <input type="password" name="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
+      <p  class="mt-3">prenom</p>
+        <input type="text" name="prenom" required maxlength="50" placeholder ="Jean"
+        > <br>
+      <p class="mt-3">age</p>
+        <input type="number" name="age" min="14" max="120" required placeholder ="32"><br>
+      <p class="mt-3">sexe</p>
+        <select type="select" required name="sexe"><br>
             <option value ="homme">Homme</option> 
             <option value = "femme">Femme</option> </select> <br>
-    <label for="prenom">Taille en m</label>
-        <input type="decimal" name="taille" placeholder ="1.75"><br>
-    <label for="prenom">Poids en kg</label>
-        <input type="number" name="poids" placeholder ="81"><br>
+      <p class="mt-3">taille</p>
+        <input type="decimal" name="taille" min="1.00" max="2.20"required placeholder ="1.75"><br>
+      <p class="mt-3">poids</p>
+        <input type="number" name="poids" min="30" max="250"  required placeholder ="81"><br>
 
-    <button type="submit" name="submit" class="btnValider">S'inscrire</button>
+    <button type="submit" name="submit" class="btnValider btn-success rounded mt-2">S'inscrire</button>
 
   </form>
 
@@ -164,7 +166,7 @@ session_start();
       <div class="ms-2 me-2">
         <p style="font-size:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-</svg> tél : 06-89-65-79-54</p>
+</svg> tél : xx-xx-xx-xx-xx</p>
       </div>
       <div class="ms-2">
       <p class="" style="font-size:10px;"> <a href="https://www.linkedin.com/in/yann-devriere-a3327b222?originalSubdomain=fr"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
