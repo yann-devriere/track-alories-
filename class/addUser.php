@@ -9,7 +9,8 @@ if(isset($_POST['submit'])) {
     $user = new Users;
 
     $email = $user->valid_donnees($_POST["email"]);
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $passwordVerifie = $user->valid_donnees($_POST['password']);
+    $password = password_hash($passwordVerifie, PASSWORD_DEFAULT);
     $prenom =  $user->valid_donnees($_POST["prenom"]);
     $age = $user->valid_donnees($_POST["age"]);
     $sexe = $user->valid_donnees($_POST["sexe"]);
