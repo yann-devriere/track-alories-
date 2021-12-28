@@ -39,7 +39,7 @@ session_start();
         <li class="nav-item">
         <a href="#pied" class=" btn btn-sm btn-outline-light m-2">Contacts</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
         <a href="#presentation" class=" btn btn-sm btn-outline-light m-2">Présentation</a>
         </li>
     </ul>
