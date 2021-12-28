@@ -118,7 +118,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
       </div>
       <div class="modal-body">
 
-      <div class="h4 text-info">
+      <div class="h4 text-success">
         Tu mesures : <?php echo $_SESSION['taille']?> m pour <?php echo $_SESSION['poids']?> kg.
       </div>
 
