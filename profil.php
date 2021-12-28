@@ -22,7 +22,7 @@ if($_SESSION['email'] == null){
     <!-- navbar -->
 <nav class="navbar navbar-expand-sm bg-success" >
     <div class="container-xxl">
-        <a href="index.php" class="navbar-brand">
+        <a href="profil.php" class="navbar-brand">
             <span class="fw-bold text-light">Track'alories</span>
         </a>
 <!-- bouton toggle pour les mobiles-->
