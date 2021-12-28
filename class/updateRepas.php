@@ -18,7 +18,7 @@ if(isset($_POST['btnRepas'])) {
         if(!empty($calories)
         && strlen($calories) <= 4
         && strlen($date) <= 12){
-        
+
         $repas->updateRepas($email, $date, $calories,);
         echo'<script>alert("Repas ajouté" );window.location.href = "../profil.php";</script>';
         }else{

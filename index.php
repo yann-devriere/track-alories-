@@ -90,9 +90,9 @@ session_start();
       <form class="connexion" method="POST" action="verifications/session.php"> <h3>Connexion</h3>
             <div class="innerMenu">
              <p>Adresse email*</p>
-                <input type="email" name="emailconnect" maxlength="254" required placeholder="Email"></input>
+                <input class="form-control" type="email" name="emailconnect" maxlength="254" required placeholder="Email"></input>
              <p class="mt-3">Mot de passe*</p>
-                <input type="password" name="mdpconnect"  maxlength="25" required placeholder="Mot de passe"></input>
+                <input class="form-control" type="password" name="mdpconnect"  maxlength="25" required placeholder="Mot de passe"></input>
                 <div class="btnSpot">
                 <button type="submit" name="formconnexion" class="btnConnexion btn-success rounded mt-2">Connexion</button>
                 </div>
@@ -118,25 +118,25 @@ session_start();
 
  <form action="./class/addUser.php" method="POST">
       <p>Email</p> 
-        <input type="text" name="email" maxlength="254" required placeholder="jean@gmail.com"
+        <input class="form-control" type="text" name="email" maxlength="254" required placeholder="jean@gmail.com"
        > <br>
       <p class="mt-3">Mot de passe</p>
-        <input type="password" name="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
+        <input class="form-control" type="password" name="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
       <p class="mt-3">Confirmer le mot de passe</p>
-        <input type="password" name="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
+        <input class="form-control" type="password" name="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
       <p  class="mt-3">prenom</p>
-        <input type="text" name="prenom" required maxlength="50" placeholder ="Jean"
+        <input class="form-control" type="text" name="prenom" required maxlength="50" placeholder ="Jean"
         > <br>
       <p class="mt-3">age</p>
-        <input type="number" name="age" min="14" max="120" required placeholder ="32"><br>
+        <input class="form-control" type="number" name="age" min="14" max="120" required placeholder ="32"><br>
       <p class="mt-3">sexe</p>
-        <select type="select" required name="sexe"><br>
+        <select class="form-control" type="select" required name="sexe"><br>
             <option value ="homme">Homme</option> 
             <option value = "femme">Femme</option> </select> <br>
       <p class="mt-3">taille</p>
-        <input type="decimal" name="taille" min="1.00" max="2.20"required placeholder ="1.75"><br>
+        <input class="form-control" type="decimal" name="taille" min="1.00" max="2.20"required placeholder ="1.75"><br>
       <p class="mt-3">poids</p>
-        <input type="number" name="poids" min="30" max="250"  required placeholder ="81"><br>
+        <input class="form-control" type="number" name="poids" min="30" max="250"  required placeholder ="81"><br>
 
     <button type="submit" name="submit" class="btnValider btn-success rounded mt-2">S'inscrire</button>
 
