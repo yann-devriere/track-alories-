@@ -119,7 +119,7 @@ ton IMC est de <?php include ('tools/calculator.php');?>
       <div class="modal-body">
 
       <div class="h4">
-        Tu mesures : <?php $_SESSION['taille']?> pour <?php $_SESSION['poids']?> kg.
+        Tu mesures : <?php echo $_SESSION['taille']?> pour <?php echo $_SESSION['poids']?> kg.
       </div>
 
       <form class="formUpdate" method="POST" action="./class/updateUser.php"> <h3>Un changement physique ?</h3>
