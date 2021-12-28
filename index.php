@@ -133,9 +133,9 @@ session_start();
         <select class="form-control" type="select" required name="sexe"><br>
             <option value ="homme">Homme</option> 
             <option value = "femme">Femme</option> </select> <br>
-      <p class="mt-3">taille</p>
+      <p class="mt-3">taille (en m)</p>
         <input class="form-control" type="decimal" name="taille" min="1.00" max="2.20"required placeholder ="1.75"><br>
-      <p class="mt-3">poids</p>
+      <p class="mt-3">poids (en kg)</p>
         <input class="form-control" type="number" name="poids" min="30" max="250"  required placeholder ="81"><br>
 
     <button type="submit" name="submit" class="btnValider btn-success rounded mt-2">S'inscrire</button>

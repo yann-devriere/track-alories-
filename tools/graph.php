@@ -8,8 +8,13 @@
  $email = $_SESSION['email'];
  $date= date('Y-m-d');
  $repas->getLastDays($email);
- 
  $repas->getLastDays($email);
+
+ if($_SESSION['sexe']=="homme"){
+	 $limite = "2700";
+ }else{
+	$limite = "2200";
+ }
 
 ?>
 
@@ -44,8 +49,29 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "spline",
+		lineColor: "green",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
+	},{
+		type: "spline",
+		lineColor: "brown",
+		showInLegend: true,
+		markerSize: 2,
+		legendMarkerType:"none"  ,
+		legendText:"Moyenne maximum conseillée",
+		dataPoints:[{ x: 0, y: <?php echo $limite ?>,},
+			{x: 1, y: <?php echo $limite ?>,},
+            { x: 2, y: <?php echo $limite ?>,}, 
+            { x: 3, y: <?php echo $limite ?>,}, 
+            { x: 4, y: <?php echo $limite ?>,},
+            { x: 5, y: <?php echo $limite ?>,},
+            { x: 6, y: <?php echo $limite ?>,}, 
+            { x: 7, y: <?php echo $limite ?>,},
+            { x: 8, y: <?php echo $limite ?>,},
+            { x: 9, y: <?php echo $limite ?>,},
+			{ x: 10, y: <?php echo $limite ?>,}] 
+	}
+	]
+	
 });
 chart.render();
  
