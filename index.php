@@ -121,9 +121,9 @@ session_start();
         <input class="form-control" type="text" name="email" maxlength="254" required placeholder="jean@gmail.com"
        > <br>
       <p class="mt-3">Mot de passe</p>
-        <input class="form-control" type="password" name="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
+        <input class="form-control" type="password" name="password" id="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
       <p class="mt-3">Confirmer le mot de passe</p>
-        <input class="form-control" type="password" name="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
+        <input class="form-control" type="password" name="password2" id="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
       <p  class="mt-3">prenom</p>
         <input class="form-control" type="text" name="prenom" required maxlength="50" placeholder ="Jean"
         > <br>
@@ -149,9 +149,6 @@ session_start();
     </div>
   </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
 
@@ -188,6 +185,26 @@ session_start();
    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<script>
+
+const pwd = document.querySelector("#password");
+const pwd2 = document.querySelector("#password2");
+
+pwd2.addEventListener('keyup',function(){
+    if (pwd.value != pwd2.value){
+    pwd2.setAttribute("style","background-color : red;");
+    }else{
+        pwd2.setAttribute("style","background-color : green;")
+    }
+})
+
+
+</script>
+
 </body>
+
 
 </html>

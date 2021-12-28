@@ -11,13 +11,14 @@ if(isset($_POST['submit'])) {
     $email = $user->valid_donnees($_POST["email"]);
     $passwordVerifie = $user->valid_donnees($_POST['password']);
     $password = password_hash($passwordVerifie, PASSWORD_DEFAULT);
+    $passwordVerifie2 = $user->valid_donnees($_POST['password2']);
     $prenom =  $user->valid_donnees($_POST["prenom"]);
     $age = $user->valid_donnees($_POST["age"]);
     $sexe = $user->valid_donnees($_POST["sexe"]);
     $taille = $user->valid_donnees($_POST["taille"]);
     $poids = $user->valid_donnees($_POST["poids"]);
 
-
+if ( $passwordVerifie == $passwordVerifie2){
     if (
         !empty($email)
         && filter_var($email, FILTER_VALIDATE_EMAIL)
@@ -42,5 +43,8 @@ if(isset($_POST['submit'])) {
         echo'<script>alert("Erreur dans le formulaire, données invalides." );window.location.href = "../index.php";</script>';
     }
         
+}else{
+    echo'<script>alert("Mots de pass différents." );window.location.href = "../index.php";</script>';
+}
         
 }
