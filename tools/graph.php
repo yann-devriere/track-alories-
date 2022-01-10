@@ -48,27 +48,28 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		title: "Nombre de calories"
 	},
 	data: [{
-		type: "spline",
+		type: "line",
 		lineColor: "green",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	},{
-		type: "spline",
+	}
+	,{
+		type: "line",
 		lineColor: "brown",
 		showInLegend: true,
 		markerSize: 2,
-		legendMarkerType:"none"  ,
+		legendMarkerType:"none",
 		legendText:"Moyenne maximum conseillée",
-		dataPoints:[{ x: 0, y: <?php echo $limite ?>,},
-			{x: 1, y: <?php echo $limite ?>,},
-            { x: 2, y: <?php echo $limite ?>,}, 
-            { x: 3, y: <?php echo $limite ?>,}, 
-            { x: 4, y: <?php echo $limite ?>,},
-            { x: 5, y: <?php echo $limite ?>,},
-            { x: 6, y: <?php echo $limite ?>,}, 
-            { x: 7, y: <?php echo $limite ?>,},
-            { x: 8, y: <?php echo $limite ?>,},
-            { x: 9, y: <?php echo $limite ?>,},
-			{ x: 10, y: <?php echo $limite ?>,}] 
+		dataPoints:[
+		    { label: "Il y a 9j", y: <?php echo $limite ?>},
+			{ label: "Il y a 8j", y: <?php echo $limite ?>},
+			{ label: "Il y a 7j", y: <?php echo $limite ?>},
+			{ label: "Il y a 6j", y: <?php echo $limite ?>},
+			{ label: "Il y a 5j", y: <?php echo $limite ?>},
+			{ label: "Il y a 4j", y: <?php echo $limite ?>},
+			{ label: "Il y a 3j", y: <?php echo $limite ?>},
+			{ label: "Il y a 2j", y: <?php echo $limite ?>},
+			{ label: "Hier", y: <?php echo $limite ?>},
+		    {label: "Aujourd'hui", y: <?php echo $limite ?>}] 
 	}
 	]
 	
