@@ -19,6 +19,7 @@ if(isset($_POST['submit'])) {
     $poids = $user->valid_donnees($_POST["poids"]);
 
 if ( $passwordVerifie == $passwordVerifie2){
+    
     if (
         !empty($email)
         && filter_var($email, FILTER_VALIDATE_EMAIL)

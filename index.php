@@ -121,7 +121,7 @@ session_start();
         <input class="form-control" type="text" name="email" maxlength="254" required placeholder="jean@gmail.com"
        > <br>
       <p class="mt-3">Mot de passe</p>
-        <input class="form-control" type="password" name="password" id="password" required minlength="" maxlength="25" placeholder ="Définir un mot de passe" > <br>
+        <input class="form-control" type="password" name="password" id="password" required minlength="8" maxlength="25" placeholder ="Définir un mot de passe" > <br>
       <p class="mt-3">Confirmer le mot de passe</p>
         <input class="form-control" type="password" name="password2" id="password2" maxlength="25"  required placeholder ="Confirmer le mot de passe"> <br>
       <p  class="mt-3">prenom</p>

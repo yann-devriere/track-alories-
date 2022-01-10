@@ -6,10 +6,19 @@ class Users extends Bdd {
 
 
     public function createUser($email, $password, $prenom,  $age, $sexe, $taille, $poids) {
+        $sql = "SELECT email FROM users WHERE email='$email'"; 
+        $result = $this->connect()->prepare($sql);
+        $result-> execute();
+
+        if($result->rowCount() > 0){
+            echo'<script>alert("Adresse mail déjà utilisée" );window.location.href = "../index.php";</script>';
+
+        }else{
         $sql = "INSERT INTO `users`(`email`, `password`, `prenom`, `age`, `sexe`, `taille`, `poids`) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $req = $this->connect()->prepare($sql);
         $req->execute([$email, $password, $prenom, $age, $sexe, $taille, $poids]);
-        
+        }
+
     }
 
     public function read($id) {
